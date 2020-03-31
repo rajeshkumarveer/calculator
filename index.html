@@ -366,6 +366,7 @@
             document.getElementById("value_result").id = "value_result1";
             clears();
             document.getElementById("user_value").focus();
+            document.getElementById("user_value").select(); 
             var m=document.getElementsByClassName("equal_button")[0];
             m.classList.add("effect2");
             setTimeout(function() {m.classList.remove("effect2");}, 100);
@@ -376,7 +377,10 @@
     }
     function checking(){
         
-        
+        if(event.keyCode === 13||event.keyCode === 187){
+            clears();
+            document.getElementById("user_value").select(); 
+        }
 
         var x=event.keyCode;
         if(!((x>=48&&x<=57)||x===9||x===13||x===191||x===16||x===32||x===37||x===39||x===46||(x>=96&&x<=111)||x===116||x===8||x===91||x===17||x===189||x===18||x===190||x===187)){
