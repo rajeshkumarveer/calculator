@@ -375,13 +375,22 @@
         }
     }
     function checking(){
-        
+        var x=event.keyCode;
         if(event.keyCode === 13||event.keyCode === 187){
-            clears();
-            
+            clears();   
+        }
+        if(x===96){
+            var s=document.getElementById("user_value").value;
+            if(s.length==1){
+                clears();
+            }
+            if(s.length>1&&!s.substring(s.length-2,s.length-1)>=0&&!s.substring(s.length-2,s.length-1)<10){
+                document.getElementById("user_value").value=s.substring(0,s.length-1);
+            }
+
         }
 
-        var x=event.keyCode;
+        
         if(!((x>=48&&x<=57)||x===9||x===13||x===191||x===16||x===32||x===37||x===39||x===46||(x>=96&&x<=111)||x===116||x===8||x===91||x===17||x===189||x===18||x===190||x===187)){
             alert("Wrong key is entered !.......");
             clears();
