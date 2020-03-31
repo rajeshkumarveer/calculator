@@ -338,6 +338,7 @@
     }
     function clears() {
         document.getElementById("user_value").value="";
+        document.getElementById("user_value").select(); 
     }
     
     setInterval(function() {
@@ -365,7 +366,6 @@
             document.getElementById("user_value").id = "user_value1";
             document.getElementById("value_result").id = "value_result1";
             clears();
-            document.getElementById("user_value").focus();
             document.getElementById("user_value").select(); 
             var m=document.getElementsByClassName("equal_button")[0];
             m.classList.add("effect2");
