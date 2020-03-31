@@ -337,7 +337,7 @@
         document.getElementById("user_value").value=x;
     }
     function clears() {
-        document.getElementById("user_value").value=0;
+        document.getElementById("user_value").value="";
     }
     
     setInterval(function() {
@@ -379,7 +379,7 @@
         
         if(event.keyCode === 13||event.keyCode === 187){
             clears();
-            document.getElementById("user_value").select(); 
+            
         }
 
         var x=event.keyCode;
